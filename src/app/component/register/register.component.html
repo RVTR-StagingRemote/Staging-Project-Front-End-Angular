@@ -1,0 +1,66 @@
+<div id="register">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Register for this stuff</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+        <!-- <form> -->
+            <mat-form-field>
+                <!-- dont forget to put in matInput in each input element  -->
+                <mat-label>First name</mat-label>
+                <input
+                    matInput
+                    type="text"
+                    name="firstName"
+                    required
+                > 
+               </mat-form-field>
+               <mat-form-field>
+                   <mat-label>Last name</mat-label>
+                   <input
+                    matInput
+                    type="text"
+                    name="lastName"
+                    required
+                   >
+               </mat-form-field>
+               <mat-form-field>
+                   <mat-label>Username</mat-label>
+                <input
+                    matInput
+                    type="text"
+                    name="userName"
+                    required
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input
+                    matInput
+                    type="email"
+                    name="eMail"
+                    required
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input
+                    matInput
+                    type="password"
+                    name="password"
+                    required
+                >
+            </mat-form-field>
+            <!-- </form> -->
+        </mat-card-content>
+        <mat-card-actions>
+            <button
+                mat-raised-button
+                color="primary"
+            >
+            Sign up
+            </button>
+        </mat-card-actions>    
+    </mat-card>
+        
+</div>
