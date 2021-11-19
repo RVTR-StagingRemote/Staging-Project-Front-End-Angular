@@ -1,5 +1,12 @@
-.register {
+.box {
+    height: 100vh;
     display: flex;
-    text-align: center;
+    justify-content: center;
     align-items: center;
+}
+
+.register {
+    display: inline-block;
+    text-align: center;
+    margin: 30px 600px 75px;
 }
