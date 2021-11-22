@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserRegistrationService } from 'src/app/service/fetch-api-data.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  @Input() userData = {Firstname: '', Lastname: '', Username: '', Email: '', Password: '' };
+
+  constructor(
+    // public fetchApiData: UserRegistrationService
+    ) { }
 
   ngOnInit(): void {
   }
+
+  registerUser(): void {
+    console.log(this.userData);
+  }
+
+
 
 }

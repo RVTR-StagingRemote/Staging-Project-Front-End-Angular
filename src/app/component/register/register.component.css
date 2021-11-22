@@ -1,5 +1,18 @@
-.register {
+.box {
+    height: 100vh;
     display: flex;
-    text-align: center;
+    justify-content: center;
     align-items: center;
+}
+
+.please-work {
+    width: 100%;
+}
+
+.register {
+    /* display: inline-block; */
+    text-align: center;
+    margin-top: 2%;
+    margin-right: 30%;
+    margin-left: 30%;
 }
