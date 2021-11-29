@@ -9,13 +9,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { UtilService } from './services/util.service';
 import { AboutComponent } from './pages/about/about.component';
+import { ResetloginComponent } from './components/resetlogin/resetlogin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LandingComponent,
-    AboutComponent
+    AboutComponent,
+    ResetloginComponent
   ],
   imports: [
     BrowserModule,
