@@ -33,6 +33,15 @@ export class UserRegistrationService {
       catchError(this.handleError)
     );
   }
+  // Making the api call for the user registration endpoint
+  public userInformation(userData: any): Observable<any> {
+    console.log(userData);
+    return this.http.get(
+      // apiUrl + 
+      'users', userData).pipe(
+        catchError(this.handleError)
+      );
+  }
 
   private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {
