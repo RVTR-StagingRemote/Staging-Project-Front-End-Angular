@@ -1,10 +1,11 @@
+<app-navbar></app-navbar>
 <div id="box">
     <mat-card class="register">
         <div>
             <mat-card-header>
                 <!-- <h2 class="please-work">Please fill out form</h2> -->
-                <div class="please-work">
-                    <mat-card-title class="please-work">Registration</mat-card-title>
+                <div class="title">
+                    <mat-card-title class="please-work">Company Registration</mat-card-title>
                 </div>
             </mat-card-header>
         </div>
@@ -12,44 +13,38 @@
             <mat-card-content>
                 <div>
                     <mat-form-field>
-                        <mat-label>First name</mat-label>
-                        <input matInput type="text" name="Firstname" required> 
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field>
-                        <mat-label>Last name</mat-label>
-                        <input matInput type="text" name="Lastname" required>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field>
                         <mat-label>Username</mat-label>
-                        <input matInput type="text" name="Username" required>
+                        <input matInput [(ngModel)]="userData.Username" type="text" name="Username" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Company</mat-label>
+                        <input matInput [(ngModel)]="userData.Company"  type="email" name="Company" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Job Title</mat-label>
+                        <input matInput [(ngModel)]="userData.Job_Title"  type="email" name="Job Title" required>
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Email</mat-label>
-                        <input matInput type="email" name="Email" required>
+                        <input matInput [(ngModel)]="userData.Email"  type="email" name="Email" required>
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Password</mat-label>
-                        <input matInput  type="password" name="Password" required>
+                        <input matInput  [(ngModel)]="userData.Password"  type="password" name="Password" required>
                     </mat-form-field>
                 </div>
             </mat-card-content>
         </div>
-        <!-- <mat-card-actions>
-            <button mat-raised-button color="primary">Sign up</button>
-        </mat-card-actions>     -->
         <mat-card-actions>
-            <button mat-raised-button color="primary" routerLink="">Company</button>
-        </mat-card-actions>  
-        <mat-card-actions>
-            <button mat-raised-button color="primary" >Individual</button>
-        </mat-card-actions>  
+            <button mat-raised-button color="primary" routerLink="" (click)="registerUser()">Register your Company</button>
+        </mat-card-actions>   
     </mat-card>
 </div>
