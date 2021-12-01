@@ -20,13 +20,13 @@ The system will ask for the email associated with the account and send an email 
 export class ResetloginComponent implements OnInit {
 
   @Input() userData = { Firstname: '', Lastname: '', Email: '', Password: '' };
-  constructor(private fetchapidata: UserRegistrationService) {
+  constructor() {
   }
   
-  //when this is called I need to grab the account. 
+  
   ngOnInit(): void {
-    user: this.fetchapidata.userInformation(this.userData);
   }
+  //this is for resetting passwords, we can have a different component for resetting emails
   resetlogin(): void {
     console.log(this.userData)
   }
