@@ -16,6 +16,7 @@ export class IndividualComponent implements OnInit {
 
   registerUser(): void {
     console.log(this.userData);
+    alert("Registration complete!")
   }
 
 }
