@@ -4,12 +4,16 @@ import { ResetloginComponent } from './components/resetlogin/resetlogin.componen
 import { AboutComponent } from './pages/about/about.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { CompanyComponent } from './pages/register/company/company.component';
+import { IndividualComponent } from './pages/register/individual/individual.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'about', component: AboutComponent},
-  { path: 'register', component: RegisterComponent },
-  { path: 'resetlogin', component: ResetloginComponent }
+  {path: 'register', component: RegisterComponent},
+  {path: 'resetlogin', component: ResetloginComponent},
+  {path: 'register/company', component: CompanyComponent},
+  {path: 'register/individual', component: IndividualComponent}
 ];
 
 @NgModule({
