@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -19,6 +18,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ResetloginComponent } from './components/resetlogin/resetlogin.component';
 import { CompanyComponent } from './pages/register/company/company.component';
 import { IndividualComponent } from './pages/register/individual/individual.component';
+import { ClientSkillsComponent } from './pages/client-skills/client-skills.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { IndividualComponent } from './pages/register/individual/individual.comp
     AboutComponent,
     ResetloginComponent,
     CompanyComponent,
-    IndividualComponent
+    IndividualComponent,
+    ClientSkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { IndividualComponent } from './pages/register/individual/individual.comp
     MatCardModule,
     MatButtonModule,
     MatDialogModule
+   
   ],
   providers: [UtilService],
   bootstrap: [AppComponent]
