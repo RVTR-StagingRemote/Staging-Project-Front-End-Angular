@@ -17,8 +17,12 @@ export class ResetemailComponent implements OnInit {
   }
   /*
     This is what will be called by the form submittion in resetemail.component.html
+    This needs to call something that sends an emai. To be determined
   */
   resetemail(): void {
+    //implemenation notes:
+    //Needs a way to make sure that the person is who they say that they are so that anyone can't just reset anyone else's account
+    //Given an email, send an email to reset the email and password already in the DB. 
     console.log(this.userData)
   }
 }
