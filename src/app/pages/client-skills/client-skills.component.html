@@ -1,11 +1,65 @@
-<p>client-skills works!</p>
-<!-- <div formArrayName="theThing">
-    <h2>Required Skills</h2>
-    <button type="button">+ Add other skills</button>
-
-    <div *ngFor="let skill of skills.controls; let i=index">
-
-        <label for="alias-{{ i }}">Alias:</label>
-        <input id="alias-{{ i }}" type="text" [formControlName]="i">
-    </div> 
-</div> -->
+<app-navbar></app-navbar>
+<div class="box">
+    <mat-card color="secondary" class="client-reqs">
+        <div class="title">
+            <mat-card-title class="please-work">Client Requirements</mat-card-title>
+        </div>
+        <div class="forms">
+            <mat-card-content>
+                <div>
+                    <div>
+                        <label>Field of Interest</label>
+                    </div>
+                    <mat-form-field>
+                        <mat-label>Field</mat-label>
+                        <input matInput  type="text" name="Current Job Title" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <div>
+                        <label>Tech Stack</label>
+                    </div>
+                    <mat-form-field>
+                        <mat-label>Primary Language(s)</mat-label>
+                        <input matInput  type="text" name="Field/Specialization" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Services</mat-label>
+                        <input matInput  type="text" name="Field/Specialization" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <div>
+                        <label>Experience</label>
+                    </div>
+                    <mat-form-field>
+                        <mat-label>Years of Experience</mat-label>
+                        <input matInput type="number" name="Years of Experience" required>
+                    </mat-form-field>
+                </div>
+                <mat-form-field>
+                    <mat-label>Position</mat-label>
+                    <input matInput  type="text" name="Position" required>
+                </mat-form-field>
+                <div> 
+                    <label class="skills">Skills</label>
+                    <button mat-raised-button color="secondary" (click)="addSkill()">Add skill</button>
+                    <div formArrayName="skills" *ngFor="let skill of skills.controls; let i = index">
+                        <mat-form-field>
+                            <!-- <mat-label>Skill</mat-label> -->
+                            <td>
+                                <input matInput type="text" placeholder="Country" class="form-control my-1" [formControlName]="i" required>     
+                            </td>
+                        </mat-form-field>
+                    </div>
+                </div>
+                
+            </mat-card-content>
+        </div>  
+        <mat-card-actions class="submit">
+            <button mat-raised-button color="primary" routerLink="" >Submit</button>
+        </mat-card-actions>  
+    </mat-card>
+</div>

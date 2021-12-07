@@ -14,18 +14,17 @@ export class ClientSkillsComponent implements OnInit {
     return this.skillsForm.get('skills') as FormArray
   }
 
-  addSkills() {
+  addSkill() {
     this.skills.push(this.fb.control(''));
   }
 
   constructor(
     private fb: FormBuilder
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.skillsForm = this.fb.group({
       Field: [''],
-      somethingElse: [''],
       techStack: this.fb.group({
         languages: [''],
         services: [''],

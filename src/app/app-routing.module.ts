@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'about', component: AboutComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'client-skills', component: ClientSkillsComponent},
+  {path: 'clientskills', component: ClientSkillsComponent},
   {path: 'resetlogin', component: ResetloginComponent},
   {path: 'register/company', component: CompanyComponent},
   {path: 'register/individual', component: IndividualComponent}
