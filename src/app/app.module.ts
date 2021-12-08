@@ -29,7 +29,7 @@ import { ResetemailComponent } from './components/resetemail/resetemail.componen
     RegisterComponent,
     NavbarComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
     ResetloginComponent,
     CompanyComponent,
     IndividualComponent,
