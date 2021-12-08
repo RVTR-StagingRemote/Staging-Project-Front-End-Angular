@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { UtilService } from './services/util.service';
 import { AboutComponent } from './pages/about/about.component';
+import { LoginComponent } from './pages/login/login.component';
 import { ResetloginComponent } from './components/resetlogin/resetlogin.component';
 import { CompanyComponent } from './pages/register/company/company.component';
 import { IndividualComponent } from './pages/register/individual/individual.component';
@@ -28,6 +29,7 @@ import { ResetemailComponent } from './components/resetemail/resetemail.componen
     RegisterComponent,
     NavbarComponent,
     AboutComponent,
+    LoginComponent
     ResetloginComponent,
     CompanyComponent,
     IndividualComponent,
