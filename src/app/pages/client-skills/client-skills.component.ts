@@ -8,7 +8,17 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 })
 export class ClientSkillsComponent implements OnInit {
 
-  skillsForm!: FormGroup;
+  skillsForm = this.fb.group({
+    Field: [''],
+    techStack: this.fb.group({
+      languages: [''],
+      services: [''],
+    }),
+    skills: this.fb.array([
+      this.fb.control('')
+    ])
+  });
+
 
   get skills() { 
     return this.skillsForm.get('skills') as FormArray
@@ -23,14 +33,9 @@ export class ClientSkillsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.skillsForm = this.fb.group({
-      Field: [''],
-      techStack: this.fb.group({
-        languages: [''],
-        services: [''],
-      }),
-      skills: this.fb.array([])
-    });
+  
+  
   }
+
 
 }
