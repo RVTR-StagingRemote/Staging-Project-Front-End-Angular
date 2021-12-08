@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserRegistrationService } from 'src/app/service/fetch-api-data.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-resetlogin',
@@ -18,9 +20,9 @@ The system will ask for the email associated with the account and send an email 
 
 */
 export class ResetloginComponent implements OnInit {
-
+  _isEmpty: boolean = false;
   @Input() userData = { Firstname: '', Lastname: '', Email: '', Password: '' };
-  constructor() {
+  constructor(private userService: UserService, private router: Router) {
   }
   
   
@@ -30,7 +32,18 @@ export class ResetloginComponent implements OnInit {
   //Cases when they enter emails:
   //Either the email exists already in the database, in which case, potential popup that says "Email sent to X to reset password"
   //Or the email doesn't exist, in which case, we just say "We are sorry, we can't find your email"
-  resetlogin(): void {
+  resetlogin(email: string): void {
+    //if email isn't empty
+    if (email != "") {
+      this._isEmpty = false;
+      this.userService.editUser(this.userData).subscribe(response => {
+        
+      })
+    }
+    //if email is empty
+    else {
+      this._isEmpty = false;
+    }
     //implementation notes:
     //call backend to look up email sent through by form submittion
     //if it exists, great, send email
