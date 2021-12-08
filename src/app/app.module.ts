@@ -19,6 +19,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ResetloginComponent } from './components/resetlogin/resetlogin.component';
 import { CompanyComponent } from './pages/register/company/company.component';
 import { IndividualComponent } from './pages/register/individual/individual.component';
+import { ResetemailComponent } from './components/resetemail/resetemail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { IndividualComponent } from './pages/register/individual/individual.comp
     AboutComponent,
     ResetloginComponent,
     CompanyComponent,
-    IndividualComponent
+    IndividualComponent,
+    ResetemailComponent
   ],
   imports: [
     BrowserModule,
