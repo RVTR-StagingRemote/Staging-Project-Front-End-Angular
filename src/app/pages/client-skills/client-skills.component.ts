@@ -9,10 +9,14 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 export class ClientSkillsComponent implements OnInit {
 
   skillsForm = this.fb.group({
-    Field: [''],
+    field: [''],
     techStack: this.fb.group({
       languages: [''],
       services: [''],
+    }),
+    experience: this.fb.group({
+      years: [''],
+      position: ['']
     }),
     skills: this.fb.array([
       this.fb.control('')
@@ -21,11 +25,15 @@ export class ClientSkillsComponent implements OnInit {
 
 
   get skills() { 
-    return this.skillsForm.get('skills') as FormArray
+    return this.skillsForm.get('skills') as FormArray;
   }
 
   addSkill() {
     this.skills.push(this.fb.control(''));
+  }
+
+  showInfo(){
+    console.log(this.skillsForm.value);
   }
 
   constructor(
