@@ -18,12 +18,12 @@
       <form class="pb-3" action="#">
         <div class="form-group">
           <input type="text" [(ngModel)]="userData.Email" name="Email" required>
-          <div *ngIf="_isEmpty" class="d-flex justify-content-center text-danger my-3"> Please fill out the fields
+          <div *ngIf="_isEmpty" class="d-flex justify-content-center text-danger my-3"> Please fill out the field
             above!
           </div>
         </div>
       </form>
-      <button mat-raised-button color="primary" (click)="resetlogin()">Reset Password</button>
+      <button mat-raised-button color="primary" (click)="resetlogin(userData.Email)">Reset Password</button>
     </div>
   </div>
 </body>

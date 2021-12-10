@@ -36,8 +36,8 @@ export class ResetloginComponent implements OnInit {
     //if email isn't empty
     if (email != "") {
       this._isEmpty = false;
-      this.userService.editUser(this.userData).subscribe(response => {
-        
+      this.userService.editUser(this.userData).subscribe((response: { Firstname: string; Lastname: string; Email: string; Password: string; }) => {
+        this.userData = response;
       })
     }
     //if email is empty
