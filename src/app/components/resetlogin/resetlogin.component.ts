@@ -21,6 +21,11 @@ The system will ask for the email associated with the account and send an email 
 */
 export class ResetloginComponent implements OnInit {
   _isEmpty: boolean = false;
+  _emailisEmpty: boolean = false;
+  _passwordisEmpty: boolean = false;
+  _firstisEmpty: boolean = false;
+  _lastisEmpty: boolean = false;
+  user: any = {};
   @Input() userData = { Firstname: '', Lastname: '', Email: '', Password: '' };
   constructor(private userService: UserService, private router: Router) {
   }
@@ -32,17 +37,26 @@ export class ResetloginComponent implements OnInit {
   //Cases when they enter emails:
   //Either the email exists already in the database, in which case, potential popup that says "Email sent to X to reset password"
   //Or the email doesn't exist, in which case, we just say "We are sorry, we can't find your email"
-  resetlogin(email: string): void {
+  resetlogin(): void {
     //if email isn't empty
-    if (email != "") {
+    if (this.userData.Firstname == "") {
+      this._firstisEmpty = true;
+    }
+    else if (this.userData.Lastname == "") {
+      this._lastisEmpty = true;
+    }
+    else if (this.userData.Password == "") {
+      this._passwordisEmpty = true;
+    }
+    else if (this.userData.Email == "")
+    {
+      this._emailisEmpty = true;
+    }
+    else {
       this._isEmpty = false;
       this.userService.editUser(this.userData).subscribe((response: { Firstname: string; Lastname: string; Email: string; Password: string; }) => {
         this.userData = response;
       })
-    }
-    //if email is empty
-    else {
-      this._isEmpty = false;
     }
     //implementation notes:
     //call backend to look up email sent through by form submittion
