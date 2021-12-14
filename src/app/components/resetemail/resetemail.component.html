@@ -14,13 +14,13 @@
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="bg-white text-center p-5 mt-3 center">
       <h3>Forgot Email </h3>
-      <p>Please enter an Email to reset your Username with</p>
+      <p>Please enter an new Email to reset your preivous Email with</p>
       <form class="pb-3" action="#">
         <div class="form-group">
           <input type="text" [(ngModel)]="userData.Email" name="Email" required>
         </div>
       </form>
-      <button mat-raised-button color="primary" (click)="resetemail()">Reset Email</button>
+      <button mat-raised-button color="primary" (click)="resetemail(userData.Email)">Reset Email</button>
     </div>
   </div>
 </body>
