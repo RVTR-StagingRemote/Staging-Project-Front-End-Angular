@@ -48,7 +48,7 @@ export class ResetloginComponent implements OnInit {
     //call backend to look up email sent through by form submittion
     //if it exists, great, send email
     //if it doesn't exist, tell user that it isn't a valid email in DB and that they need to enter another email
-    console.log(this.userData)
+    alert('Successfully reset password for the account ' + this.userData.Email)
   }
 
 

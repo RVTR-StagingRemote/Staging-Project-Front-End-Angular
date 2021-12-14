@@ -23,6 +23,6 @@ export class ResetemailComponent implements OnInit {
     //implemenation notes:
     //Needs a way to make sure that the person is who they say that they are so that anyone can't just reset anyone else's account
     //Given an email, send an email to reset the email and password already in the DB. 
-    console.log(this.userData)
+    alert('Your email has been reset to ' + this.userData.Email)
   }
 }
