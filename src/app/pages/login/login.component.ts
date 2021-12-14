@@ -15,10 +15,6 @@ export class LoginComponent implements OnInit {
   _isCredentialsIncorrect: boolean = false;
   _isEmpty: boolean = false;
 
-  // For registration page
-  user: any = {};
-  @Input() userData = { Firstname: '', Lastname: '', Username: '', Email: '', Password: '' };
-
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
@@ -56,42 +52,10 @@ export class LoginComponent implements OnInit {
       this._isCredentialsIncorrect = false;
       this._isEmpty = true;
     }
-
-    /* this.userService.login(email, password).subscribe(response => {
-      if (response.success) {
-        this.user = response.data;
-        console.log(this.user);
-        sessionStorage.setItem('user', JSON.stringify(this.user));
-        sessionStorage.setItem('JWT', response.message);
-        this.userService.setHeaders();
-        // this.router.navigateByUrl('dashboard');
-      } else {
-        // alert maybe changed to something else
-        alert(response.message);
-      }
-    }) */
   }
 
   resetFields() {
     this._email = '';
     this._password = '';
   }
-
-  // For registration page
-  editUser(): void {
-    this.user.email = this.userData.Email;
-    this.user.password = this.userData.Password;
-
-    this.userService.editUser(this.user).subscribe(response => {
-      if (response.success) {
-        this.user = response.data;
-        sessionStorage.setItem('user', JSON.stringify(this.user));
-      } else {
-        // alert maybe changed to something else
-        alert(response.message);
-      }
-    })
-  }
-
-
 }
